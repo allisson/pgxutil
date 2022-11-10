@@ -1,7 +1,7 @@
 # pgxutil
 [![Build Status](https://github.com/allisson/pgxutil/workflows/Release/badge.svg)](https://github.com/allisson/pgxutil/actions)
-[![Go Report Card](https://goreportcard.com/badge/github.com/allisson/pgxutil)](https://goreportcard.com/report/github.com/allisson/pgxutil)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/allisson/pgxutil)
+[![Go Report Card](https://goreportcard.com/badge/github.com/allisson/pgxutil/v2)](https://goreportcard.com/report/github.com/allisson/pgxutil/v2)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/allisson/pgxutil/v2)
 
 A collection of helpers to deal with pgx toolkit.
 
