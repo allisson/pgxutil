@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/allisson/pgxutil/compare/v2.0.0...v2.0.1) (2022-11-10)
+
+
+### Bug Fixes
+
+* update readme to use v2 ([#7](https://github.com/allisson/pgxutil/issues/7)) ([97d0381](https://github.com/allisson/pgxutil/commit/97d0381efc93dab1c00a5b3e0eebe8a97931843d))
+
 ## [2.0.0](https://github.com/allisson/pgxutil/compare/v1.1.0...v2.0.0) (2022-11-10)
 
 
