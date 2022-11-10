@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/allisson/pgxutil/compare/v2.0.1...v2.0.2) (2022-11-10)
+
+
+### Bug Fixes
+
+* update badges ([#9](https://github.com/allisson/pgxutil/issues/9)) ([97c2219](https://github.com/allisson/pgxutil/commit/97c2219a0c82b6d23e8edd3302970dcf233f13c5))
+
 ## [2.0.1](https://github.com/allisson/pgxutil/compare/v2.0.0...v2.0.1) (2022-11-10)
 
 
