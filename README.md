@@ -15,8 +15,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/allisson/pgxutil"
-	"github.com/jackc/pgx/v4"
+	"github.com/allisson/pgxutil/v2"
+	"github.com/jackc/pgx/v5"
 )
 
 type Player struct {
@@ -104,7 +104,7 @@ Options for FindOptions and FindAllOptions:
 package main
 
 import (
-	"github.com/allisson/pgxutil"
+	"github.com/allisson/pgxutil/v2"
 )
 
 func main() {
