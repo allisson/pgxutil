@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/pashagolub/pgxmock"
+	"github.com/pashagolub/pgxmock/v2"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -36,9 +36,9 @@ func TestSelect(t *testing.T) {
 	defer mock.Close(context.Background())
 
 	rows := mock.NewRows([]string{"id", "name"}).AddRow(1, "Ronaldinho Gaúcho").AddRow(2, "Ronaldo Fenômeno")
-	mock.ExpectQuery(regexp.QuoteMeta(`SELECT * FROM players LIMIT 10 OFFSET 0`)).WillReturnRows(rows)
+	mock.ExpectQuery(regexp.QuoteMeta(`SELECT * FROM players LIMIT 10 OFFSET 0 FOR UPDATE SKIP LOCKED`)).WillReturnRows(rows)
 
-	options := NewFindAllOptions().WithLimit(10).WithOffset(0)
+	options := NewFindAllOptions().WithLimit(10).WithOffset(0).WithForUpdate("SKIP LOCKED")
 	p := []*player{}
 	err = Select(context.Background(), mock, "players", options, &p)
 	assert.Nil(t, err)
