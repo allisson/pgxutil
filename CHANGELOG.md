@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/allisson/pgxutil/compare/v2.0.2...v2.1.0) (2022-11-14)
+
+
+### Features
+
+* update pgx to version 5.1.0 ([#11](https://github.com/allisson/pgxutil/issues/11)) ([1b81810](https://github.com/allisson/pgxutil/commit/1b81810e5b8873f9eedb0fb9f3f14fadf6b3077a))
+
 ## [2.0.2](https://github.com/allisson/pgxutil/compare/v2.0.1...v2.0.2) (2022-11-10)
 
 
