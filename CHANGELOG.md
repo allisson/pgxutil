@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/allisson/pgxutil/compare/v2.1.0...v2.2.0) (2023-03-31)
+
+
+### Features
+
+* update pgx to version v5.3.1 ([#13](https://github.com/allisson/pgxutil/issues/13)) ([def128e](https://github.com/allisson/pgxutil/commit/def128e9d955a295a94401735184cfdb38325227))
+
 ## [2.1.0](https://github.com/allisson/pgxutil/compare/v2.0.2...v2.1.0) (2022-11-14)
 
 
