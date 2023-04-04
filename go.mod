@@ -3,7 +3,7 @@ module github.com/allisson/pgxutil/v2
 go 1.20
 
 require (
-	github.com/allisson/sqlquery v1.3.0
+	github.com/allisson/sqlquery v1.3.1
 	github.com/georgysavva/scany/v2 v2.0.0
 	github.com/jackc/pgx/v5 v5.3.1
 	github.com/pashagolub/pgxmock/v2 v2.6.0
