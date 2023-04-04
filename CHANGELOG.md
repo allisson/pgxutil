@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/allisson/pgxutil/compare/v2.3.0...v2.3.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* update sqlquery version ([#17](https://github.com/allisson/pgxutil/issues/17)) ([2fb025f](https://github.com/allisson/pgxutil/commit/2fb025f726a2c11a66ad1663cb5cb0c6ec19bc5a))
+
 ## [2.3.0](https://github.com/allisson/pgxutil/compare/v2.2.0...v2.3.0) (2023-04-04)
 
 
