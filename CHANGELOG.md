@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/allisson/pgxutil/compare/v2.2.0...v2.3.0) (2023-04-04)
+
+
+### Features
+
+* add UpdateWithOptions and DeleteWithOptions functions ([#15](https://github.com/allisson/pgxutil/issues/15)) ([4039874](https://github.com/allisson/pgxutil/commit/4039874333e97a122ad33061b19b579da1faab45))
+
 ## [2.2.0](https://github.com/allisson/pgxutil/compare/v2.1.0...v2.2.0) (2023-03-31)
 
 
