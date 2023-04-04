@@ -1,5 +1,5 @@
-github.com/allisson/sqlquery v1.2.0 h1:2CAWnS7sPBUqls0+R3VJeZTeu1ZJHuA+2xO8uzZ3BzY=
-github.com/allisson/sqlquery v1.2.0/go.mod h1:SfAu/CPxjTQU7cYVGljdFtwT8s0QZ/6BM6bzrxenoBo=
+github.com/allisson/sqlquery v1.3.0 h1:m260I23tu14mjYyhYBvRU5RV3QmUAoEL6T62LJp4ZhE=
+github.com/allisson/sqlquery v1.3.0/go.mod h1:SfAu/CPxjTQU7cYVGljdFtwT8s0QZ/6BM6bzrxenoBo=
 github.com/cockroachdb/cockroach-go/v2 v2.2.0 h1:/5znzg5n373N/3ESjHF5SMLxiW4RKB05Ql//KWfeTFs=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
