@@ -9,8 +9,12 @@ import (
 	"github.com/jackc/pgx/v5/pgconn"
 )
 
-type FindOptions = sqlquery.FindOptions
-type FindAllOptions = sqlquery.FindAllOptions
+type (
+	FindOptions    = sqlquery.FindOptions
+	FindAllOptions = sqlquery.FindAllOptions
+	UpdateOptions  = sqlquery.UpdateOptions
+	DeleteOptions  = sqlquery.DeleteOptions
+)
 
 var (
 	postgreSQLFlavor = sqlquery.PostgreSQLFlavor
@@ -24,6 +28,16 @@ func NewFindOptions() *FindOptions {
 // NewFindAllOptions returns a FindAllOptions.
 func NewFindAllOptions() *FindAllOptions {
 	return sqlquery.NewFindAllOptions(postgreSQLFlavor)
+}
+
+// NewUpdateOptions returns a UpdateOptions
+func NewUpdateOptions() *UpdateOptions {
+	return sqlquery.NewUpdateOptions(postgreSQLFlavor)
+}
+
+// NewDeleteOptions returns a DeleteOptions
+func NewDeleteOptions() *DeleteOptions {
+	return sqlquery.NewDeleteOptions(postgreSQLFlavor)
 }
 
 // Querier is a abstraction over *pgxpool.Pool/*pgx.Conn/pgx.Tx.
@@ -51,7 +65,7 @@ func Insert(ctx context.Context, db Querier, tag, tableName string, structValue 
 	return err
 }
 
-// Update is a high-level function that calls sqlquery.pdateQuery and pgx Exec.
+// Update is a high-level function that calls sqlquery.UpdateQuery and pgx Exec.
 func Update(ctx context.Context, db Querier, tag, tableName string, id interface{}, structValue interface{}) error {
 	sqlQuery, args := sqlquery.UpdateQuery(postgreSQLFlavor, tag, tableName, id, structValue)
 	_, err := db.Exec(ctx, sqlQuery, args...)
@@ -61,6 +75,20 @@ func Update(ctx context.Context, db Querier, tag, tableName string, id interface
 // Delete is a high-level function that calls sqlquery.DeleteQuery and pgx Exec.
 func Delete(ctx context.Context, db Querier, tableName string, id interface{}) error {
 	sqlQuery, args := sqlquery.DeleteQuery(postgreSQLFlavor, tableName, id)
+	_, err := db.Exec(ctx, sqlQuery, args...)
+	return err
+}
+
+// UpdateWithOptions is a high-level function that calls sqlquery.UpdateWithOptionsQuery and pgx Exec.
+func UpdateWithOptions(ctx context.Context, db Querier, tableName string, options *UpdateOptions) error {
+	sqlQuery, args := sqlquery.UpdateWithOptionsQuery(tableName, options)
+	_, err := db.Exec(ctx, sqlQuery, args...)
+	return err
+}
+
+// DeleteWithOptions is a high-level function that calls sqlquery.DeleteWithOptionsQuery and pgx Exec.
+func DeleteWithOptions(ctx context.Context, db Querier, tableName string, options *DeleteOptions) error {
+	sqlQuery, args := sqlquery.DeleteWithOptionsQuery(tableName, options)
 	_, err := db.Exec(ctx, sqlQuery, args...)
 	return err
 }

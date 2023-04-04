@@ -99,3 +99,31 @@ func TestDelete(t *testing.T) {
 	err = Delete(context.Background(), mock, "players", p.ID)
 	assert.Nil(t, err)
 }
+
+func TestUpdateWithOptions(t *testing.T) {
+	mock, err := pgxmock.NewConn()
+	assert.Nil(t, err)
+	defer mock.Close(context.Background())
+
+	mock.ExpectExec(regexp.QuoteMeta(`UPDATE players SET name = $1 WHERE id = $2`)).
+		WithArgs("Ronaldinho Gaúcho", 1).
+		WillReturnResult(pgxmock.NewResult("UPDATE", 1))
+
+	options := NewUpdateOptions().WithAssignment("name", "Ronaldinho Gaúcho").WithFilter("id", 1)
+	err = UpdateWithOptions(context.Background(), mock, "players", options)
+	assert.Nil(t, err)
+}
+
+func TestDeleteWithOptions(t *testing.T) {
+	mock, err := pgxmock.NewConn()
+	assert.Nil(t, err)
+	defer mock.Close(context.Background())
+
+	mock.ExpectExec(regexp.QuoteMeta(`DELETE FROM players WHERE id = $1`)).
+		WithArgs(1).
+		WillReturnResult(pgxmock.NewResult("DELETE", 1))
+
+	options := NewDeleteOptions().WithFilter("id", 1)
+	err = DeleteWithOptions(context.Background(), mock, "players", options)
+	assert.Nil(t, err)
+}
