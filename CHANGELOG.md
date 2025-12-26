@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/allisson/pgxutil/compare/v2.4.0...v2.4.1) (2025-12-26)
+
+
+### Bug Fixes
+
+* update dependencies ([#21](https://github.com/allisson/pgxutil/issues/21)) ([44824ef](https://github.com/allisson/pgxutil/commit/44824ef69e5fb0181eb72bb40c287be96ecedfd0))
+
 ## [2.4.0](https://github.com/allisson/pgxutil/compare/v2.3.1...v2.4.0) (2024-02-15)
 
 
