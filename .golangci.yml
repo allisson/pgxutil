@@ -1,7 +1,28 @@
+version: "2"
 linters:
   enable:
     - gosec
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
     - goimports
-linters-settings:
-  goimports:
-    local-prefixes: github.com/allisson/pgxutil
+  settings:
+    goimports:
+      local-prefixes:
+        - github.com/allisson/pgxutil
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
