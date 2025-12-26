@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/pashagolub/pgxmock/v2"
+	"github.com/pashagolub/pgxmock/v4"
 	"github.com/stretchr/testify/assert"
 )
 
