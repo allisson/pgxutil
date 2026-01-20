@@ -36,7 +36,7 @@ func TestSelect(t *testing.T) {
 	defer mock.Close(context.Background())
 
 	rows := mock.NewRows([]string{"id", "name"}).AddRow(1, "Ronaldinho Gaúcho").AddRow(2, "Ronaldo Fenômeno")
-	mock.ExpectQuery(regexp.QuoteMeta(`SELECT * FROM players LIMIT 10 OFFSET 0 FOR UPDATE SKIP LOCKED`)).WillReturnRows(rows)
+	mock.ExpectQuery(regexp.QuoteMeta(`SELECT * FROM players LIMIT $1 OFFSET $2 FOR UPDATE SKIP LOCKED`)).WithArgs(10, 0).WillReturnRows(rows)
 
 	options := NewFindAllOptions().WithLimit(10).WithOffset(0).WithForUpdate("SKIP LOCKED")
 	p := []*player{}
